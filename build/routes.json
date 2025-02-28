@@ -29388,6 +29388,88 @@
     "url": "www.fanbox.cc",
     "lang": "zh-CN"
   },
+  "fangchan": {
+    "routes": {
+      "/list/:id?": {
+        "path": "/list/:id?",
+        "name": "列表",
+        "url": "www.fangchan.com",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/fangchan/list/datalist",
+        "parameters": {
+          "id": {
+            "description": "分类，默认为 `datalist`，即数据研究，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "数据研究",
+                "value": "datalist"
+              },
+              {
+                "label": "行业测评",
+                "value": "industrylist"
+              },
+              {
+                "label": "政策法规",
+                "value": "policylist"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n若订阅 [列表](https://www.fangchan.com/)，网址为 `https://www.fangchan.com/`，请截取 `https://www.fangchan.com/` 到末尾 `.html` 的部分 `datalist` 作为 `id` 参数填入，此时目标路由为 [`/fangchan/datalist`](https://rsshub.app/fangchan/datalist)。\n:::\n\n| [数据研究](https://www.fangchan.com/datalist)         | [行业测评](https://www.fangchan.com/industrylist)             | [政策法规](https://www.fangchan.com/policylist)           |\n| ----------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------- |\n| [datalist](https://rsshub.app/fangchan/list/datalist) | [industrylist](https://rsshub.app/fangchan/list/industrylist) | [policylist](https://rsshub.app/fangchan/list/policylist) |\n",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.fangchan.com/:id"
+            ]
+          },
+          {
+            "title": "数据研究",
+            "source": [
+              "www.fangchan.com/datalist"
+            ],
+            "target": "/list/datalist"
+          },
+          {
+            "title": "行业测评",
+            "source": [
+              "www.fangchan.com/industrylist"
+            ],
+            "target": "/list/industrylist"
+          },
+          {
+            "title": "政策法规",
+            "source": [
+              "www.fangchan.com/policylist"
+            ],
+            "target": "/list/policylist"
+          }
+        ],
+        "view": 0,
+        "location": "list.ts"
+      }
+    },
+    "name": "中房网",
+    "url": "fangchan.com",
+    "categories": [
+      "new-media"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "fanqienovel": {
     "routes": {
       "/page/:bookId": {
